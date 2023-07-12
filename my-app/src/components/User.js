@@ -1,13 +1,19 @@
 import React from "react"
+import { IoCloseCircleSharp, IoHammerSharp } from 'react-icons/io5'
 
-class Header extends React.Component {
-  render(){
-    return(
-      <header className="header">
-        {this.props.title}
-      </header>
-    )
-  }
+class User extends React.Component {
+    user = this.props.user
+    render(){
+        return(
+            <div className="user" >
+                <IoCloseCircleSharp className="delete-icon" />
+                <IoHammerSharp className="edit-icon" />
+                <h3>{this.user.firstname} {this.user.lastname}</h3>
+                <p>{this.user.bio}</p>
+                <b>{this.user.isHappy ? "Счастлив :)" : "Не особо :("}</b>
+            </div>
+        )
+    }
 }
 
-export default Header
+export default User
