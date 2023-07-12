@@ -5,8 +5,8 @@ class AddUser extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            firstname: "",
-            lastname: "",
+            first_name: "",
+            last_name: "",
             bio: "",
             age: 1,
             isHappy: false
@@ -15,8 +15,8 @@ class AddUser extends React.Component {
     render(){
         return(
         <form ref ={(el) => this.myForm = el}>
-            <input placeholder="Имя" onChange ={(event) => this.setState({firstname: event.target.value})}/>
-            <input placeholder="Фамилия" onChange ={(event) => this.setState({lastname: event.target.value})}/>
+            <input placeholder="Имя" onChange ={(event) => this.setState({first_name: event.target.value})}/>
+            <input placeholder="Фамилия" onChange ={(event) => this.setState({last_name: event.target.value})}/>
             <textarea placeholder="Биография" onChange ={(event) => this.setState({bio: event.target.value})}></textarea>
             <input placeholder="Возраст" onChange ={(event) => this.setState({age: event.target.value})}/>
             <label htmlFor="isHappy">Счастлив?</label>
